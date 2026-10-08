@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marked file ready</title>
+    <link rel="stylesheet" href="/assets/app.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel">
+        <h1>Marked file ready</h1>
+        <p><a href="{{ download_url }}">Download marked file</a></p>
+        <p><a href="{{ resolver_url }}">{{ resolver_url }}</a></p>
+        <img class="qr" src="{{ qr_url }}" alt="QR code for resolver URL">
+        <dl>
+          <dt>Site</dt>
+          <dd>{{ record.site_name or "Unknown" }}</dd>
+          <dt>Author</dt>
+          <dd>{{ record.author or "Unknown" }}</dd>
+          <dt>Published</dt>
+          <dd>{{ record.published_at or "Unknown" }}</dd>
+          <dt>Content hash</dt>
+          <dd><code>{{ record.content_hash }}</code></dd>
+        </dl>
+      </section>
+    </main>
+  </body>
+</html>

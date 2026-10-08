@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Provenance MVP</title>
+    <link rel="stylesheet" href="/assets/app.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel">
+        <h1>Media Provenance MVP</h1>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+          <label>
+            Source article URL
+            <input name="source_url" type="url" placeholder="https://example.com/article" required>
+          </label>
+          <label>
+            Media to mark
+            <input name="media_file" type="file" accept="image/*,video/*" required>
+          </label>
+          <button type="submit">Create marked file</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

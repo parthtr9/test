@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+data/app.sqlite3
+data/marked/
+data/qr/
+data/smoke/
+data/thumbnails/
+.DS_Store

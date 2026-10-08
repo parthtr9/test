@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Source provenance</title>
+    <link rel="stylesheet" href="/assets/app.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel">
+        <h1>Source provenance</h1>
+        {% if record.thumbnail_path %}
+          <img class="thumb" src="/thumbnails/{{ record.thumbnail_path }}" alt="Stored thumbnail">
+        {% endif %}
+        <dl>
+          <dt>Original source</dt>
+          <dd><a href="{{ record.source_url }}" rel="nofollow noreferrer">{{ record.source_url }}</a></dd>
+          <dt>Site</dt>
+          <dd>{{ record.site_name or "Unknown" }}</dd>
+          <dt>Author</dt>
+          <dd>{{ record.author or "Unknown" }}</dd>
+          <dt>Published</dt>
+          <dd>{{ record.published_at or "Unknown" }}</dd>
+          <dt>Saved</dt>
+          <dd>{{ record.saved_at }}</dd>
+          <dt>Content hash</dt>
+          <dd><code>{{ record.content_hash }}</code></dd>
+        </dl>
+      </section>
+    </main>
+  </body>
+</html>
